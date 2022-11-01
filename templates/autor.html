@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block title %}Venta{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-12">
+    <h1>Listado de ventas</h1>
+  </div>
+</div>
+<div class="row" style="margin-top: 20px;">
+  <div class="col-md-2"></div>
+  <div class="col-md-6">
+    {% if v %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Cantidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for valor in v %}
+        <tr>
+          <th scope="row">*</th>
+          <td>{{valor[0]}}</td>
+          <td>{{valor[1]}}</td>
+          <td>{{valor[2]}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </div>
+  <div class="col-md-4"></div>
+</div>
+{% endblock %}

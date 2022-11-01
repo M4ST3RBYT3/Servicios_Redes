@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+
+{% block title %}C3D{% endblock %}
+
+{% block content %}
+
+    <form class="row g-3" action="/c3d" method="POST">
+        <div class="form-floating col-md-6">
+            <textarea class="form-control" placeholder="Leave your code here" id="input" name="input" style="height: 700px">{{buffer}}</textarea>
+            <label for="input">Input</label>
+        </div>
+        <div class="form-floating col-md-6">
+            <textarea class="form-control" placeholder="Leave your code here" id="console2" style="height: 700px">{{output}}</textarea>
+            <label for="console2">Console</label>
+        </div>
+        <p><input type="submit" name="submit" class="btn btn-success" value="Ejecutar"/></p>
+    </form>
+
+{% endblock %}

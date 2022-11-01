@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block title %}Servicio{% endblock %}
+
+{% block content %}
+
+    <form class="row g-3" action="/MyApp" method="POST">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" id="description" name="description" value="{{a}}">
+                <label for="description">Descripcion</label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" id="amount" name="amount" value="{{b}}">
+                <label for="amount">Precio</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 15px;">
+                <input type="number" id="count" name="count" value="{{c}}">
+                <label for="count">Cantidad</label>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3">
+                <input type="submit" value="Agregar" id="btn_send">
+            </div>
+        </div>
+    </form>
+
+{% endblock %}

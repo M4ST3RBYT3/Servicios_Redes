@@ -1,0 +1,49 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <h1>Reportes</h1>
+    <h3>Bases de datos</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Base de datos</th>
+            <th scope="col">Tablas</th>
+            <th scope="col">Linea</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for i in range(0, tb)%}
+            <tr>
+                <th scope="row">{{i+1}}</th>
+                <td>{{bases[i][0]}}</td>
+                <td>{{bases[i][1]}}</td>
+                <td>{{bases[i][2]}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+      </table>
+    <h3>Tablas en las bases de datos</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tabla</th>
+            <th scope="col">Base de datos</th>
+            <th scope="col">Linea</th>
+          </tr>
+        </thead>
+        <tbody>
+            {%for i in range(0, tt)%}
+            <tr>
+                <th scope="row">{{i+1}}</th>
+                <td>{{tablas[i][0]}}</td>
+                <td>{{tablas[i][1]}}</td>
+                <td>{{tablas[i][2]}}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+      </table>
+
+{% endblock %}
